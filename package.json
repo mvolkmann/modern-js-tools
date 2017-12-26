@@ -5,6 +5,7 @@
   "main": "index.html",
   "scripts": {
     "babel": "babel src -d build",
+    "build": "npm-run-all verify babel bundle",
     "bundle": "webpack",
     "clean": "rm -rf build coverage",
     "cover": "CI=true npm test -- --coverage",
@@ -14,7 +15,7 @@
     "lint": "eslint --quiet src --ext .js",
     "prepush": "npm run verify",
     "test": "jest src",
-    "verify": "npm-run-all lint flow test-no-watch"
+    "verify": "npm-run-all lint flow format cover"
   },
   "keywords": [
     "JavaScript",
@@ -24,7 +25,8 @@
   "license": "MIT",
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.js"
+      "src/**/*.js",
+      "!src/index.js"
     ],
     "coverageThreshold": {
       "global": {

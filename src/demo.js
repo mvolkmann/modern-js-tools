@@ -30,7 +30,9 @@ export function onLoad(document: Document) {
   // $FlowFixMe
   const messageDiv: HTMLDivElement = document.getElementById('message');
 
+  // istanbul ignore next
   if (!nameInput) throw new Error('nameInput not found');
+  // istanbul ignore next
   if (!greetButton) throw new Error('greetButton not found');
 
   nameInput.onkeyup = handleNameChange.bind(null, nameInput, greetButton);
