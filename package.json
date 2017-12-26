@@ -12,7 +12,7 @@
   "scripts": {
     "babel": "babel src -d build",
     "build": "npm-run-all verify babel bundle",
-    "bundle": "webpack",
+    "bundle": "cp src/*.css build; webpack",
     "clean": "rm -rf build coverage",
     "cover": "CI=true npm run test-nowatch -- --coverage",
     "cover-open": "open coverage/lcov-report/index.html",
