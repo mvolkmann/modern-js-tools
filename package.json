@@ -4,13 +4,16 @@
   "description": "demonstates use of modern JS tools",
   "main": "index.html",
   "scripts": {
+    "babel": "babel src -d build",
+    "bundle": "webpack",
+    "clean": "rm -rf build coverage",
     "cover": "CI=true npm test -- --coverage",
     "cover-open": "open coverage/lcov-report/index.html",
     "flow": "flow",
     "format": "prettier-eslint --write src/**/*.js",
     "lint": "eslint --quiet src --ext .js",
     "prepush": "npm run verify",
-    "test": "jest",
+    "test": "jest src",
     "verify": "npm-run-all lint flow test-no-watch"
   },
   "keywords": [
@@ -19,11 +22,27 @@
   ],
   "author": "R. Mark Volkmann <r.mark.volkmann@gmail.com> (https://mvolkmann.github.io/)",
   "license": "MIT",
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.1.2",
+    "babel-loader": "^7.1.2",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.7",
     "eslint": "^4.14.0",
     "eslint-plugin-flowtype": "^2.40.1",
     "eslint-plugin-html": "^4.0.1",
@@ -31,6 +50,9 @@
     "jest": "^22.0.4",
     "npm-run-all": "^4.1.2",
     "prettier": "^1.9.2",
-    "prettier-eslint-cli": "^4.7.0"
-  }
+    "prettier-eslint-cli": "^4.7.0",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {}
 }
