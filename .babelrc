@@ -3,7 +3,7 @@
     ["env", {
       "targets": {
         "browsers": ["last 2 versions"],
-        "node": 8.0
+        "node": 9.3
       }
     }]
   ],
