@@ -1,0 +1,39 @@
+body {
+  font-family: sans-serif;
+}
+
+button {
+  background-color: white;
+  border-radius: 4px;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 4px 8px;
+}
+
+button:disabled {
+  background-color: lightgray;
+}
+
+h2 {
+  color: blue;
+}
+
+input {
+  border: solid lightgray 1px;
+  border-radius: 4px;
+  box-shadow: none;
+  font-size: 16px;
+  padding: 4px;
+}
+
+label {
+  font-weight: bold;
+}
+
+#message {
+  color: green;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 5px;
+}
