@@ -14,12 +14,13 @@
     "build": "npm-run-all verify babel bundle",
     "bundle": "webpack",
     "clean": "rm -rf build coverage",
-    "cover": "CI=true npm test -- --coverage",
+    "cover": "CI=true npm run test-nowatch -- --coverage",
     "cover-open": "open coverage/lcov-report/index.html",
     "flow": "flow",
     "format": "prettier-eslint --write src/**/*.js",
     "lint": "eslint --quiet src --ext .js",
-    "test": "jest src",
+    "test": "jest --watch src",
+    "test-nowatch": "jest src",
     "verify": "npm-run-all lint flow format cover"
   },
 
