@@ -7,18 +7,6 @@
     "node": true
   },
 
-  /*
-  "globals": {
-    "afterEach": false,
-    "beforeEach": false,
-    "describe": false,
-    "expect": false,
-    "it": false,
-    "test": false,
-    "$": false
-  },
-  */
-
   "parser": "babel-eslint",
 
   "parserOptions": {
