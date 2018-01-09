@@ -10,10 +10,8 @@ describe('demo', () => {
   });
 
   test('handleGreet', () => {
-    //const nameInput = new HTMLInputElement();
     const nameInput = document.createElement('input');
     nameInput.value = 'Mark';
-    //const messageDiv = new HTMLDivElement();
     const messageDiv = document.createElement('div');
     messageDiv.textContent = '';
     const event = new Event('click');
@@ -26,10 +24,8 @@ describe('demo', () => {
   });
 
   test('handleNameChange', () => {
-    //const nameInput = new HTMLInputElement();
     const nameInput = document.createElement('input');
     nameInput.value = 'Mark';
-    //const greetButton = new HTMLButtonElement();
     const greetButton = document.createElement('button');
     greetButton.disabled = true;
 
