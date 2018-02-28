@@ -23,7 +23,7 @@ describe('demo', () => {
     expect(event.preventDefault).toBeCalled();
   });
 
-  test.skip('handleNameChange', () => {
+  test('handleNameChange', () => {
     const nameInput = document.createElement('input');
     nameInput.value = 'Mark';
     const greetButton = document.createElement('button');
