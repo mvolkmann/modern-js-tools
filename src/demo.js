@@ -2,7 +2,7 @@
 
 export function getGreeting(name: string = 'World'): string {
   if (name === '') name = 'nobody';
-  return `Howdy, ${name}!`;
+  return `Hello, ${name}!`;
 }
 
 export function handleGreet(
