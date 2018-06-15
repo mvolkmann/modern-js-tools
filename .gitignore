@@ -3,4 +3,5 @@ build
 coverage
 flow-typed
 node_modules
+.cache
 *.swp
