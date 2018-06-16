@@ -1,6 +1,7 @@
 .DS_Store
 build
 coverage
+dist
 flow-typed
 node_modules
 .cache

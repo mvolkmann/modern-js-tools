@@ -18,7 +18,7 @@
     "flow": "flow",
     "format": "prettier-eslint --write 'src/**/*.js'",
     "lint": "eslint --quiet src --ext .js",
-    "parcel": "parcel build index-parcel.html",
+    "parcel": "parcel index-parcel.html",
     "prepush": "npm run verify",
     "sync": "browser-sync start --server --files 'index-webpack.html' 'build/bundle.js'",
     "test": "jest --config jest.json src",
