@@ -9,10 +9,10 @@
     "tools"
   ],
   "scripts": {
-    "babel": "babel src -d build",
+    "babel": "babel src -d dist",
     "build": "npm-run-all verify bundle",
     "bundle": "webpack --mode development",
-    "clean": "rm -rf build coverage dist .cache",
+    "clean": "rm -rf coverage dist .cache",
     "cover": "jest --coverage",
     "cover-open": "open coverage/lcov-report/index.html",
     "flow": "flow",
@@ -20,7 +20,7 @@
     "lint": "eslint --quiet src --ext .js",
     "parcel": "parcel index-parcel.html",
     "prepush": "npm run verify",
-    "sync": "browser-sync start --server --files 'index-webpack.html' 'build/bundle.js'",
+    "sync": "browser-sync start --server --files 'index-webpack.html' 'dist/main.js'",
     "test": "jest --config jest.json src",
     "test-watch": "jest --config jest.json --watch src",
     "verify": "npm-run-all lint flow format cover"

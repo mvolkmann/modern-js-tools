@@ -1,5 +1,3 @@
-// @flow
-
 import './demo.css';
 
 import {onLoad} from './demo';

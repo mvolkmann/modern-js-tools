@@ -1,5 +1,3 @@
-// @flow
-
 import {getGreeting, handleGreet, handleNameChange, onLoad} from './demo.js';
 
 describe('demo', () => {
