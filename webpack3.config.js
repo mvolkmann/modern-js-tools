@@ -2,7 +2,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: __dirname,
-    filename: 'build/bundle.js'
+    filename: 'dist/main.js'
   },
   module: {
     loaders: [
@@ -15,7 +15,7 @@ module.exports = {
         test: /\.css$/,
         exclude: /node_modules/,
         loader: 'style-loader!css-loader'
-      },
+      }
     ]
   },
   watch: true
