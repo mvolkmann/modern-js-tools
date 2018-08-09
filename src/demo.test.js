@@ -13,7 +13,6 @@ describe('demo', () => {
     const messageDiv = document.createElement('div');
     messageDiv.textContent = '';
     const event = new Event('click');
-    // $FlowFixMe - allow replacing this method
     event.preventDefault = jest.fn();
 
     handleGreet(nameInput, messageDiv, event);
@@ -41,7 +40,6 @@ describe('demo', () => {
     const nameInput = {};
     const idMap = {greetButton, message, nameInput};
     const document = new Document();
-    // $FlowFixMe - allow replacing this method
     document.getElementById = id => idMap[id];
 
     onLoad(document);

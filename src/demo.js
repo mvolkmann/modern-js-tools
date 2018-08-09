@@ -14,11 +14,8 @@ export function handleNameChange(nameInput, greetButton) {
 }
 
 export function onLoad(document) {
-  // $FlowFixMe
   const nameInput = document.getElementById('nameInput');
-  // $FlowFixMe
   const greetButton = document.getElementById('greetButton');
-  // $FlowFixMe
   const messageDiv = document.getElementById('message');
 
   // istanbul ignore next
