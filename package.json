@@ -18,6 +18,7 @@
     "lint": "eslint --quiet src --ext .js",
     "parcel": "parcel index.html",
     "prepush": "npm run verify",
+    "start": "parcel",
     "sync": "browser-sync start --server --files 'index-webpack.html' 'dist/main.js'",
     "test": "jest --config jest.json src",
     "test-watch": "jest --config jest.json --watch src",
